@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>WSL上のLinuxで動かしているVimとクリップボードを連携させる手順 | 青竹雑記帖（5代目）</title>
+        <base href="http://blog.aotake91.net/">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/button-design.css">
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/article.css">
+    </head>
+    <body>
+        <header>
+            <h1>青竹雑記帖（5代目）</h1>
+        </header>
+        <main>
+            <h2>WSL上のLinuxで動かしているVimとクリップボードを連携させる手順</h2>
+            <p style="text-align: right;">投稿日: 2021.03.27</p>
+
+            <article>
+<h3>はじめに</h3>
+<p>
+わたしはVimが好きです。そしてUNIX的なコマンドが使える環境が好きです。今まで
+Windows上でGVimを主に使ってきましたが、最近、Windows Subsystem for Linux上の
+LinuxでCUI版Vimを利用するようになりました。
+</p>
+<p>
+基本的にはVimのパッケージをそのままインストール（Ubuntuでしたら apt install vim）
+して設定すれば最高の環境が得られますが、ひとつだけ問題があります。パッケージとし
+て配布されているVimはクリップボード連携機能が無効化されてビルドされています。そ
+のままでは、Windowsの他のアプリケーションとの間でやり取りするのに苦労します。
+</p>
+<p>
+クリップボードを利用できるようにするにはいくつか方法がありますが、そのうちのひと
+つ、VcXsrv Windows X Server を利用する方法を紹介します。
+</p>
+<h3>手順概略</h3>
+<ol>
+<li>Vimの機能有効化状態を確認</li>
+<li>Vimをクリップボード機能有効にしてビルド</li>
+<li>VcXsrv をセットアップ</li>
+<li>VcXsrv に接続</li>
+</ol>
+<h3>1. Vimの機能有効化状態を確認</h3>
+<p>
+Vimを起動した状態で「:version」コマンドを実行するか、シェルコマンドラインから次
+のコマンドを実行します。
+</p>
+<pre>
+$ vim --version
+</pre>
+<p>
+このときに、「+clipboard」とあればクリップボード機能は有効化されていますので手順
+3に進んでください。「-clipboard」でしたら、手順2のビルド作業をします。
+</p>
+<p>
+ビルド作業をするのでしたら、ついでに各種スクリプト言語のインタプリタとの連携機能
+も有効化しておくと、将来的にいろいろ捗るかもしれません。「python」「python3」
+「ruby」「lua」などについて、頭に「-」がついていたら手順2で有効化できます。
+</p>
+<h3>2. Vimをクリップボード機能有効にしてビルド</h3>
+<p>
+基本的に、必要な（必要そうな）ライブラリを入れて make すると完了です。
+</p>
+<pre>
+# ビルドのために最低限必要なツールを導入
+$ sudo apt install git gettext libtinfo-dev libacl1-dev libgpm-dev build-essential
+
+# Python2, Python3, Ruby, Lua, Perl連携に必要なツールとライブラリを導入
+$ sudo apt install python python-dev python3 python3-dev ruby ruby-dev lua5.3 liblua5.3-dev libperl-dev
+
+# GitHubから最新版のVimをクローン
+$ git clone https://github.com/vim/vim.git
+
+# ビルドオプションの設定
+$ cd vim/src
+$ ./configure --with-features=huge \
+              --disable-gui \
+              --enable-perlinterp=dynamic \
+              --enable-pythoninterp=dynamic \
+              --enable-python3interp=dynamic \
+              --enable-rubyinterp=dynamic \
+              --enable-luainterp=dynamic \
+              --enable-fail-if-missing
+
+# ビルドとインストール
+$ make
+$ sudo make install
+
+# 新しい Vim が呼び出せるように、コマンドへのパスのキャッシュを再構築
+$ hash -r
+</pre>
+<p>
+各インタプリタ連携については、不要なものは外しても大丈夫です。また、連携するため
+のライブラリはすべてダイナミックリンクとしています。GUIについては利用しないため
+無効化しました。
+</p>
+<p>
+インストール後の最後の手順は重要です。コマンドへのパスのキャッシュがあると、意図
+しない（もとのバージョンの）方のVimを呼び出してしまいます。キャッシュを再構築す
+ることで新しいVimを呼び出せるようにします。
+</p>
+<h3>3. VcXsrv をセットアップ</h3>
+<p>
+続いて、VcXsrv Windows X Server をセットアップします。
+</p>
+<ol>
+<li><a href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a> からプログラムをダウンロードしてインストールします。</li>
+<li>XLaunch を実行します。
+    <pre>Disable access control ← これをチェックすることを忘れずに。</pre>
+         Save Configuration ボタンをクリックして、 
+    <pre>C:\Users\[Your User Name]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch</pre>にファイルを保存すると、自動起動できます。</li>
+<li>Windowsファイアウォール通信許可のダイアログが出たら、VcXsrvを許可するよう設定します。</li>
+</ol>
+<h3>4. VcXsrv に接続</h3>
+<p>
+WSLのバージョンが1であるか、2であるかによって、設定すべき内容が変わります。
+</p>
+<pre>
+# WSL 1 の場合
+export DISPLAY=localhost:0.0
+
+# WSL 2 の場合
+LOCAL_IP=$(cat /etc/resolv.conf | grep nameserver | cut -d' ' -f2)
+export DISPLAY=$LOCAL_IP:0.0
+</pre>
+<p>
+上記のコマンドを .bashrc など、利用しているシェルの起動スクリプトに記述してくだ
+さい。
+</p>
+<p>
+以上で手順は終わりです。よいVimライフを！
+</p>
+<h3>参考文献</h3>
+<ul>
+<li><a href="https://qiita.com/necojackarc/items/8129ed9e6d8083aec34a1">Qiita - Ubuntu on WSL2 上の Vim でクリップボード連携</a></li>
+<li><a href="https://vim-jp.org/docs/build_linux.html">vim-jp - Linuxでのビルド方法</a></li>
+</ul>
+
+            </article>
+        </main>
+        <footer>
+            <p>Copyright(c) 2020-2021 麦（青竹） All rights reserved.</p>
+        </footer>
+    </body>
+</html>
