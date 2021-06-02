@@ -18,6 +18,17 @@ header h1 {
     font-size: 48pt;
 }
 
+header ul li {
+    float: left;
+    list-style-type: none;
+    width: 50%;
+    margin: 10px 0;
+}
+
+main {
+    clear: left;
+}
+
 main p, main h2 {
     text-align: center;
     display: flex;
@@ -47,4 +58,8 @@ th {
 
 tr:last-child > td {
     border-bottom: 1px solid black;
+}
+
+td {
+    padding: 5px;
 }
