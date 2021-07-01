@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>WSL上のLinuxで動かしているVimとクリップボードを連携させる手順 | 青竹雑記帖（5代目）</title>
-        <base href="http://blog.aotake91.net/">
+        <base href="https://blog.aotake91.net/">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/button-design.css">
@@ -17,6 +17,9 @@
         <main>
             <h2>WSL上のLinuxで動かしているVimとクリップボードを連携させる手順</h2>
             <p style="text-align: right;">投稿日: 2021.03.27</p>
+            <nav id="article-tags">
+                <p>キーワード：<a href="/keywords/コンピュータ.html">コンピュータ</a>, <a href="/keywords/Vim.html">Vim</a></p>
+            </nav>
 
             <article>
 <h3>はじめに</h3>
@@ -41,15 +44,14 @@ LinuxでCUI版Vimを利用するようになりました。
 <li>Vimをクリップボード機能有効にしてビルド</li>
 <li>VcXsrv をセットアップ</li>
 <li>VcXsrv に接続</li>
-</ol>
-<h3>1. Vimの機能有効化状態を確認</h3>
+</ol><h3>1. Vimの機能有効化状態を確認</h3>
 <p>
 Vimを起動した状態で「:version」コマンドを実行するか、シェルコマンドラインから次
 のコマンドを実行します。
 </p>
-<pre>
+<pre><code>
 $ vim --version
-</pre>
+</code></pre>
 <p>
 このときに、「+clipboard」とあればクリップボード機能は有効化されていますので手順
 3に進んでください。「-clipboard」でしたら、手順2のビルド作業をします。
@@ -63,16 +65,13 @@ $ vim --version
 <p>
 基本的に、必要な（必要そうな）ライブラリを入れて make すると完了です。
 </p>
-<pre>
+<pre><code>
 # ビルドのために最低限必要なツールを導入
 $ sudo apt install git gettext libtinfo-dev libacl1-dev libgpm-dev build-essential
-
 # Python2, Python3, Ruby, Lua, Perl連携に必要なツールとライブラリを導入
 $ sudo apt install python python-dev python3 python3-dev ruby ruby-dev lua5.3 liblua5.3-dev libperl-dev
-
 # GitHubから最新版のVimをクローン
 $ git clone https://github.com/vim/vim.git
-
 # ビルドオプションの設定
 $ cd vim/src
 $ ./configure --with-features=huge \
@@ -83,14 +82,12 @@ $ ./configure --with-features=huge \
               --enable-rubyinterp=dynamic \
               --enable-luainterp=dynamic \
               --enable-fail-if-missing
-
 # ビルドとインストール
 $ make
 $ sudo make install
-
 # 新しい Vim が呼び出せるように、コマンドへのパスのキャッシュを再構築
 $ hash -r
-</pre>
+</code></pre>
 <p>
 各インタプリタ連携については、不要なものは外しても大丈夫です。また、連携するため
 のライブラリはすべてダイナミックリンクとしています。GUIについては利用しないため
@@ -107,24 +104,25 @@ $ hash -r
 </p>
 <ol>
 <li><a href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a> からプログラムをダウンロードしてインストールします。</li>
-<li>XLaunch を実行します。
-    <pre>Disable access control ← これをチェックすることを忘れずに。</pre>
-         Save Configuration ボタンをクリックして、 
-    <pre>C:\Users\[Your User Name]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch</pre>にファイルを保存すると、自動起動できます。</li>
-<li>Windowsファイアウォール通信許可のダイアログが出たら、VcXsrvを許可するよう設定します。</li>
+<li>XLaunch を実行します。Disable access control <- これをチェックすることを忘れずに。Save Configuration ボタンをクリックして、 C:\Users\<Your User Name>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunchにファイルを保存すると、自動起動できます。</li>
+</ol><ol>
+<li>Windowsファイアウォール通信許可のダイアログが出たら、VcXsrvを許可するよう設定します。
+<ol>
+<li>### 4. VcXsrv に接続</li>
 </ol>
-<h3>4. VcXsrv に接続</h3>
-<p>
+</li>
+</ol><p>
 WSLのバージョンが1であるか、2であるかによって、設定すべき内容が変わります。
 </p>
-<pre>
+<pre><code>
 # WSL 1 の場合
 export DISPLAY=localhost:0.0
-
+</code></pre>
+<pre><code>
 # WSL 2 の場合
 LOCAL_IP=$(cat /etc/resolv.conf | grep nameserver | cut -d' ' -f2)
 export DISPLAY=$LOCAL_IP:0.0
-</pre>
+</code></pre>
 <p>
 上記のコマンドを .bashrc など、利用しているシェルの起動スクリプトに記述してくだ
 さい。
@@ -133,10 +131,10 @@ export DISPLAY=$LOCAL_IP:0.0
 以上で手順は終わりです。よいVimライフを！
 </p>
 <h3>参考文献</h3>
-<ul>
-<li><a href="https://qiita.com/necojackarc/items/8129ed9e6d8083aec34a1">Qiita - Ubuntu on WSL2 上の Vim でクリップボード連携</a></li>
-<li><a href="https://vim-jp.org/docs/build_linux.html">vim-jp - Linuxでのビルド方法</a></li>
-</ul>
+<p>
+- <a href="https://qiita.com/necojackarc/items/8129ed9e6d8083aec34a1">Qiita - Ubuntu on WSL2 上の Vim でクリップボード連携</a>
+- <a href="https://vim-jp.org/docs/build_linux.html">vim-jp - Linuxでのビルド方法</a>
+</p>
 
             </article>
         </main>

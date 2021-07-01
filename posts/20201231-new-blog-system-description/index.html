@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>ブログシステム、一応形にしました | 青竹雑記帖（5代目）</title>
-        <base href="http://blog.aotake91.net">
+        <base href="https://blog.aotake91.net/">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/button-design.css">
@@ -17,6 +17,9 @@
         <main>
             <h2>ブログシステム、一応形にしました</h2>
             <p style="text-align: right;">投稿日: 2020.12.31</p>
+            <nav id="article-tags">
+                <p>キーワード：<a href="/keywords/ブログシステム.html">ブログシステム</a></p>
+            </nav>
 
             <article>
 <p>
@@ -30,8 +33,7 @@
 <li>記事をテンプレートにはめ込むプログラム</li>
 <li>生成されたファイルを適切なディレクトリに配置するプログラム</li>
 <li>トップページ（記事一覧）を生成更新するプログラム</li>
-</ol>
-<p>
+</ol><p>
 上2つは、pandocがあれば作らなくてもいいものです。今回は、pandocが利用できない環境においても動かせるように実装しました。下2つはRubyを用いて実装しました。
 </p>
 <p>
@@ -41,19 +43,16 @@
 <li>サーバにおいて自作CGIの実行が許可されていること</li>
 <li>Ruby2.0以上のインタプリタ環境があること</li>
 <li>サーバ上のファイルを編集・削除できるような環境があること</li>
-</ul>
-<p>
+</ul><p>
 今後の予定は次の通りです。
 </p>
 <ul>
 <li>プレビュー表示の実現</li>
 <li>デザイン変更時の記事一括変換の実装</li>
 <li>キーワードによる記事一覧機能の実装</li>
-</ul>
-<p>
+</ul><p>
 このシステムを使って、これからブログを更新していきます。
 </p>
-
             </article>
         </main>
         <footer>
