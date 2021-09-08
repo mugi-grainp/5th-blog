@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/*
+ *******************************************
+ * ページ全体にかかわるCSSの設定
+ *******************************************
+ */
+
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    /* PC向け特有の設定 */
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: 'Hiragino UD Sans Rd W4 JIS2004', 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, th, strong {
+    font-weight: 700;
+}
+
+a {
+    color: #f30;
+}
+
+.page-header {
+    background: url('../img/logo-background.jpg') repeat-x;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.header-container {
+    padding: 0 4% 0 4%;
+}
+@media (min-width: 768px) {
+    .page-header {
+        height: 200px;
+    }
+    .header-container {
+        max-width: 1040px;
+        padding: 0 20px 0 20px;
+        margin: 0 auto;
+    }
+}
+
+.header-logo {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.header-logo img {
+    width: 70%;
+    max-width: 400px;
+}
+@media (min-width: 768px) {
+    .header-container {
+        padding: 0;
+    }
+    .header-logo img {
+        width: 400px;
+        padding-top: 20px;
+    }
+}
+
+.blog-description {
+    padding-left: 25px;
+}
+
+.breadcrumb {
+    display: none;
+}
+@media (min-width: 768px) {
+    .breadcrumb {
+        display: block;
+    }
+}
+
+.bc-container {
+    padding: 0 4% 0 4%;
+}
+@media (min-width: 768px) {
+    .bc-container {
+        max-width: 1040px;
+        padding: 12px 20px 0 20px;
+        margin: 0 auto;
+    }
+}
+
+.metadata {
+    text-align: right;
+}
+
+.keywords {
+    display: none;
+}
+
+.indexpage .main-container {
+    text-align: center;
+}
+
+.indexpage .articles {
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+.indexpage article {
+    display: block;
+    width: 280px;
+    height: 250px;
+    border: 1px solid #dddddd;
+    float: left;
+    padding: 20px;
+    margin: 5px;
+}
+
+.archivepage .main-container {
+    padding: 0 4% 0 4%;
+}
+
+@media (min-width: 768px) {
+    .archivepage .main-container {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+}
+
+.bottom-container {
+    clear: left;
+    padding: 60px 4% 0 4%;
+}
+@media (min-width: 768px) {
+    .bottom-container {
+        max-width: 1040px;
+        padding: 60px 20px 0 20px;
+        margin: 0 auto;
+    }
+}
+
+.footer-container {
+    padding: 60px 4%;
+}
+@media (min-width: 768px) {
+    .footer-container {
+        max-width: 1040px;
+        padding: 60px 20px;
+        margin: 0 auto;
+    }
+}
+
+/* ナビゲーションリンク */
+.nav-link {
+    list-style-type: none;
+}
+
+/* 記事ページメイン */
+.post .main-container {
+    padding: 80px 4% 0 4%;
+}
+@media (min-width: 768px) {
+    .post .main-container {
+        max-width: 1040px;
+        padding: 80px 20px 0 20px;
+        margin: 0 auto;
+    }
+}
+
+/* 前記事・次記事リンク */
+.post-link {
+    display: none;
+    text-align: center;
+}
+
+.post-contents > *::first-child {
+    margin-top: 0;
+}
+
+.post-contents p {
+    margin: 30px 0;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.copyright {
+    font-size: .75rem;
+    color: #646464;
+    text-align: center;
+}

@@ -1,13 +1,13 @@
 ---
-postdate: 2021.01.28
-keywords: テスト
+postdate: 2021.09.04
+keywords: 
 copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
 summary: ローカル側スクリプトのテスト
 ---
 
-# local-script-test
+# plan-to-universal-design
 
-## ローカル側スクリプトのテスト（第2）
+## ユニバーサルデザインへの道
 
-記事テスト
+私は万人にとって読みやすい形で情報を発信していきたいと
 
