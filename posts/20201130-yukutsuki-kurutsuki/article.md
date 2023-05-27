@@ -5,7 +5,7 @@ copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
 summary: 今日はブログにて毎月の奇習「ゆく月 くる月」をお送りします．
 ---
 
-# 20201130-yukutsuki-kurutsuki
+# yukutsuki-kurutsuki
 
 ## ゆく月 くる月（2020年11月）
 

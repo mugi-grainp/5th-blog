@@ -5,7 +5,7 @@ copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
 summary: サークルポータルサイト、当雑記帖のデザインを改装し、もともと使っていたCSSフレームワークも廃止して最高にシンプルなものに作り替えてしまいました。 
 ---
 
-# 20201229-site-design-changed
+# site-design-changed
 
 ## サイトデザイン大改装
 

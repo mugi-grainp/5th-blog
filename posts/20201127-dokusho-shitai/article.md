@@ -5,7 +5,7 @@ copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
 summary: 最近，本をほとんど読んでいないことに気がつきました．文字があふれる本どころかマンガすらもなかなか読まなくなっている要因を少し考えてみました．
 ---
 
-# 20201127-dokusho-shitai
+# dokusho-shitai
 
 ## 最近本を読めていない話
 

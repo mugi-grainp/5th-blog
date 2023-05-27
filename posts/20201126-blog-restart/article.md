@@ -5,7 +5,7 @@ copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
 summary: ブログ再開に際してのごあいさつ 
 ---
 
-# 20201126-blog-restart
+# blog-restart
 
 ## おそらく五代目のブログ再開
 
