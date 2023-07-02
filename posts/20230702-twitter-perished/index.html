@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Twitterが今度こそ滅亡してしまったかもしれません | 青竹雑記帖（5代目）</title>
+        <base href="https://blog.aotake91.net/">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese">
+    </head>
+    <body class="post">
+        <header class="page-header">
+            <div class="header-container">
+                <h1 class="header-logo">
+                    <a href="index.html"><img src="img/blog-newlogo.svg" alt="青竹雑記帖"></a>
+                </h1>
+                <p class="blog-description">デザイン洗練継続中</p>
+            </div>
+        </header>
+        <div class="breadcrumb">
+            <div class="bc-container">
+                <ul class="nav-link">
+                    <li><a href="archives/">記事一覧</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-main">
+            <div class="main-container">
+                <header class="post-header">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <h1 id="article-title">Twitterが今度こそ滅亡してしまったかもしれません</h1>
+                <div class="func-buttons">
+                    <button id="copy-article-title-and-link-button" type="button">記事タイトルとURLをコピー</button>
+                </div>
+                <div class="metadata"><span class="post-date">投稿日: 2023.07.02</span> <span class="keywords">キーワード：<a href="keywords/雑記.html">雑記</a></span></div>
+                </header>
+                <div class="post-contents">
+<h3>みなさまへの連絡手段など</h3>
+<p>
+記事冒頭で、Twitterが本当に滅んでしまった時のための代替連絡先を紹介します。
+</p>
+<ul>
+<li>ActivityPub対応のSNS（Mastodon / Misskey のシステム）
+<ul>
+<li>misskey.io : <a href="https://misskey.io/@Mugi_GrainP">麦（穀物P）（@Mugi_GrainP@misskey.io）</a></li>
+<li>Raildon Online : <a href="https://raildon.online/@Mugi_GrainP">麦（穀物P）（@Mugi_GrainP@raildon.online）</a></li>
+<li>:realtek: : <a href="https://mstdn.nere9.help/@Mugi_GrainP">麦（穀物P）（@Mugi_GrainP@mstdn.nere9.help）</a></li>
+</ul>
+</li>
+<li>Discord : aotake91</li>
+<li>電子メールなるレガシーなシステム
+<ul>
+<li>メールアドレス（メイン） : kawa.jnra415@aotake91.net</li>
+<li>サークル『麦之穂』 : circle_muginoho@aotake91.net（見ての通り、上記と同じサーバーでのホスティングですが）</li>
+</ul>
+</li>
+</ul><h3>現状報告</h3>
+<p>
+Twitterが滅びました。
+</p>
+<p>
+……と言うと、「なんだいつものことか」と思ってしまうくらいには、ここ一、二年のシ
+ステム不具合やAPIアクセス条件の突然の改悪が横行していたわけですが、今度こそ滅び
+てしまいました。
+</p>
+<p>
+<b style="font-size: large; color: red;">……見えないんです。私がフォローしているみんなの投稿が。</b>
+</p>
+<h3>果たして何が起きたんだろう？</h3>
+<p>
+日本時間の昨日（1日）22時頃、あちこちから「Twitterが見えなくなった」「上限値に達しましたとか出てきた」との悲鳴が聞こえてくるようになりました。その時点ではまだ私は普通にTLを見ることができていたので、「まあ、自分が普段使わないタイムライン機能（『おすすめ』タブや『フォロー中』タブ）の方の不具合かなと思っていましたが、それからほどなくして、自分も閲覧できなくなってしまいました。
+</p>
+<p>
+その後、日付が変わるあたりに、Twitterの<s>ファッキン</s>CEO、イーロン・マスク氏のツイートがあり、その内容は「Twitterのウェブサイトに、スクレイピングのアクセスと見られる大規模な負荷がかかっているため、急遽一時的なアクセス規制を設けた。ひとまず通常利用者は1日（24時間）について600ツイートの取得閲覧、Twitter Blue契約者は1日について6,000ツイートの取得閲覧、新規登録利用者は1日300ツイートの取得閲覧に限らせてもらう」という趣旨でした。
+</p>
+<p>
+それから、段階を追って閲覧アクセス規制は徐々に緩和され、20時時点で私が把握している限りでは、通常利用者が1日1,000ツイート、Twitter Blue契約者が1日10,000ツイート、新規利用者が1日500ツイートの取得閲覧ができるようになっているようです。
+</p>
+<h3>原因として有力とされる見方</h3>
+<p>
+当初はTwitter社の体制やイーロン・マスク氏の悪行の数々から「勝手に仕様を変更したんだろう」と言われていましたが、どうやらシステムの保守管理上のミスが原因ではないかとする説が有力で、私もその見解を見て、妥当であるとしました。内容は、
+</p>
+<ol>
+<li>ソフトウェアの設定ミスにより、自社のウェブインターフェースに対する大量かつ継続的なアクセスが発生した。</li>
+<li>そのアクセスを「外部からのスクレイピングである」と判断したアクセス保護システムが、APIレートを一気に引き下げるよう自動的に動作した。</li>
+<li>システム運用チームから連絡を受けたCEOがそれをツイートした。（なんで広報チームの体制ができていないのかという問題はさておき）</li>
+<li>24時間近く経過した今も解消していない。</li>
+</ol><p>
+といったものです。
+</p>
+<h3>対応に対する見解</h3>
+<p>
+保守管理の際のソフトウェアの設定ミスは起き得ることで、それ自体はIT業界に勤める者の端くれとして受忍するものであります。しかし、一年以上前からたびたび起きているシステム上の不具合や、突然の仕様変更に対して、広報が一切機能していない点については問題があるとします。私がやっていないものの名前だけは知っているスマートフォン向けのゲーム『ブルーアーカイブ』は、直近でシステム関係のトラブルが頻発していますが、状況を逐一報告し、最終的にトップが原因を全体的に明確に説明する体制が整っていることから、運営チームに対する信頼を持っています。Twitterにはそれがありません。あるいは失われました。
+</p>
+<h3>今の取得制限値、私にとってそれは足りるのか？</h3>
+<p>
+私のように多くの人をフォローしていて、暇な時間にちょくちょくTLを見ている人間にとっては、1日あたり1,000ツイートでの取得制限では、1時間かそこらで上限値に達してしまいます。この上限値は1アカウントごとに適用されるため、別のアカウントを持っていれば、そちらを使って凌ぐことはできます。とはいえ限界はあります。ぶっちゃけ、ほとんどの人の投稿を見ることができていないに等しくなっています。
+</p>
+<h3>Twitter Blueを契約するに値するか？</h3>
+<p>
+一般利用者である私がこの取得制限を手っ取り早く解消するには、Twitter Blueの契約をするのが有力な策となります。公式サイトからの契約では1か月について980円、年間契約の場合は12%割引の10,280円です。実際、ツイ廃の自分にとってはわりと契約しても悪くないかというもので、昨年秋くらいの1か月ほど契約していたこともあります。でも止めて今に至りますし、今回の事態の解決策としては用いる気はありません。
+</p>
+<p>
+というのも、ここ最近のTwitter社は、仕様変更を予告なく実施して事後報告するという、およそビジネスにあるまじき体制の運用がまかり通っており、少なくとも年間契約に踏み切れるほどの材料が見つかっていない現状があります。月ごとの契約であっても、特典として謳われているものが<b style="color:red;">たった1か月の間でさえも</b>一貫して提供される保証があるとはいえないと認識しています。
+</p>
+<h3>他のSNSはどうか</h3>
+<p>
+私は自分でTwitterに似た感じのマイクロブログ系SNSのシステム『Mastodon』を利用してサーバー（インスタンス）「<a href="https://raildon.online">Raildon Online</a>」を構築し、ちょうど今日で3年半になります。小規模なインスタンスですが、私の知り合いもそこそこいます。とはいえTwitterの知り合い全員ではありません。
+</p>
+<p>
+また、2年半ほど前に、やはりマイクロブログ系のSNSシステム『Misskey』を利用したサービス「<a href="https://misskey.io">misskey.io</a>」に登録しました。こちらは当初は比較的小規模のサービスで、自分も交流相手がほとんどいなかったりしましたが、Twitterのシステム障害発生のたびに少しずつ人が増え、今回はメインサーバーをはじめとする全システムを急遽大増強して、それでも間に合わない事態となっている増え方をしているそうです。
+</p>
+<p>
+Discordのアカウントもあり、Instagramもあり、実は実名でFacebookもあって放置していたり、近場の知り合いだとLINEもあり、創作方面だとpixivも使っていますが、もちろんTwitterでつながっている人全員をカバーするには至りません。
+</p>
+<h3>どうしようか</h3>
+<p>
+私はツイ廃なので、Twitterが完全に沈むその時まで運命をともにすることになります。
+一応、自分の発信手段として、このブログ的なものの他、多種多様なSNSにアカウントを
+持って運営していますが、Twitterで知り合い、現状Twitterでしかつながっていない方
+々と再度交流できるようにするのは困難が伴います。もし相手が他のSNSへの登録をしな
+かったら、もうそこまでですので。
+</p>
+<h3>結び</h3>
+<p>
+やはり連絡手段が一極集中しているといかんです。Twitterですからいざとなったら諦め
+もつきますが、GoogleやAppleがご乱心したら死にますねマジで。
+</p>
+                </div>
+                <footer class="post-footer">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                </footer>
+            </div>
+        </div>
+        <div class="page-bottom">
+            <div class="bottom-container">
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <p class="copyright">Copyright(c) 2020-2023 麦（青竹） All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="js/article-func-button.js"></script>
+    </body>
+</html>
