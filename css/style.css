@@ -73,6 +73,8 @@ a {
     }
     .header-logo img {
         width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -167,6 +169,18 @@ a {
         max-width: 1040px;
         margin: 0 auto;
     }
+}
+.archivepage .main-container table {
+    border-collapse: collapse;
+}
+.archivepage .main-container tr {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+.archivepage .main-container th,td {
+    padding: 0.3em 0.5em;
 }
 
 .bottom-container {
