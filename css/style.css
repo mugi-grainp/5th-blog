@@ -215,9 +215,9 @@ a {
     max-width: 870px;
 }
 .nav-link li {
-    float: left;
-    width: 50%;
-    margin: 0 auto;
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(100% / 3 - 0.3em);
     text-align: center;
 }
 .nav-link::after {

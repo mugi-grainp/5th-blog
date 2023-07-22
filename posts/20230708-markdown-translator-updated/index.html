@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Markdownファイルを処理できるAWKのスクリプトを改良しました | 青竹雑記帖（5代目）</title>
+        <base href="https://blog.aotake91.net/">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese">
+    </head>
+    <body class="post">
+        <header class="page-header">
+            <div class="header-container">
+                <h1 class="header-logo">
+                    <a href="index.html"><img src="img/blog-newlogo.svg" alt="青竹雑記帖"></a>
+                </h1>
+                <p class="blog-description">デザイン洗練継続中</p>
+            </div>
+        </header>
+        <div class="breadcrumb">
+            <div class="bc-container">
+                <ul class="nav-link">
+                    <li><a href="archives/">記事一覧</a></li>
+                    <li><a href="https://aotake91.net/">『青竹荘』トップページ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-main">
+            <div class="main-container">
+                <header class="post-header">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <h1 id="article-title">Markdownファイルを処理できるAWKのスクリプトを改良しました</h1>
+                <div class="func-buttons">
+                    <button id="copy-article-title-and-link-button" type="button">記事タイトルとURLをコピー</button>
+                </div>
+                <div class="metadata"><span class="post-date">投稿日: 2023.07.08</span> <span class="keywords">キーワード：<a href="keywords/PC.html">PC</a>, <a href="keywords/ソフトウェア.html">ソフトウェア</a></span></div>
+                </header>
+                <div class="post-contents">
+<p>
+みなさまに朗報です。2年前に作ってGitHubに公開した、世界に存在するMarkdownファイルの半数をHTMLに変換するAWKスクリプトのバグを少し除去して一部追加実装し、以前より使えるようになりました。
+</p>
+<p>
+<a href="https://github.com/mugi-grainp/rough-markdown-subset-translator">私のGitHub リポジトリ</a>から確認・ダウンロードいただけます。ライセンスはMIT Licenseです。
+</p>
+<h3>プログラムの動かし方</h3>
+<p>
+上記リポジトリから、markdown-subset-translator.awk をダウンロードして適当なディレクトリに置きます。同じディレクトリにMarkdownファイル（ここではtest.md）を作って、
+</p>
+<pre><code>
+awk -f markdown-subset-translator.awk test.md
+</code></pre>
+<p>
+とすると、Markdownファイルを変換したHTMLが出てきます。
+</p>
+<p>
+オプションとして <code>del_p_newline</code> 用意しています。これを1にすると、段落ブロックを&lt;p&gt;タグで囲う際に、段落中にある改行をすべて除去します。オプション指定方法は次の通りです。awkのvオプションを使って変数の値をプログラム外から設定しています。
+</p>
+<pre><code>
+awk -f markdown-subset-translator.awk -v del_p_newline=1 test.md
+</code></pre>
+<p>
+このオプションを用いることにより、日本語など、単語区切りにスペースを用いない言語におけるHTMLのレンダリングの課題を回避できます。
+</p>
+<p>
+HTMLのレンダリング規則上、ウェブブラウザは&lt;p&gt;タグ中の改行を半角スペース1つとして表示します。これは日本語を表示する場合には、文章が不自然に切れて見えたり、コピペする際に余計な半角スペースが入る要因になります。このオプションを利用して段落中の改行を消して詰めてしまうことで、余分な半角スペースが消えます。
+</p>
+<h3>文書ファイルの記法と制約</h3>
+<p>
+標準のMarkdownは文法定義が少なく、一部曖昧なところもあったため、それを補うような形で多くの派生処理系が生まれています。このプログラムはできるだけもとのMarkdown文法を尊重しつつ、派生処理系で広く採用されている記法を少し取り入れました。
+</p>
+<p>
+文書の処理にあたり、次の制約があります。
+</p>
+<ul>
+<li>見出しや箇条書きブロックの前後には空行が必要です。
+<ul>
+<li>多くのサービスでは空行が無くてもよきにはからってくれますが、当プログラムは柔軟さを持ち合わせていません。石頭です。多くの場合は意図した通りの変換結果になりません。</li>
+</ul>
+</li>
+<li>箇条書きの階層を変化させるには、タブ1文字か、半角スペース4個のインデントを利用してください。
+</li>
+<li>半角スペース2個など、他の設定にしたい場合はプログラム中の値を書き換える必要があります。将来的に設定変数として切り出す予定です。</li>
+</ul>
+<h3>変換可能な記法</h3>
+<p>
+次の記法に対応します。
+</p>
+<ul>
+<li>見出し
+<ul>
+<li>現在、Atx-styleの一部 ( # : NUMBER SIGN U+0023 を行頭にだけ置く形のもの) に対応</li>
+</ul>
+</li>
+<li>段落
+</li>
+<li>箇条書き
+<ul>
+<li>複数階層にも対応</li>
+</ul>
+</li>
+<li>順序付きリスト
+</li>
+<li>複数階層にも対応</li>
+<li>単一のコード</li>
+<li>コードブロック
+<ul>
+<li>空白4つ or タブ文字によるインデントによるブロック表現に対応</li>
+</ul>
+</li>
+<li>区切り線
+</li>
+<li>リンク (title属性付与にも対応)
+<ul>
+<li>通常のリンク</li>
+<li>定義参照リンク</li>
+</ul>
+</li>
+<li>引用
+</li>
+<li>文章強調・意味付け
+<ul>
+<li>強調 (&lt;em&gt;)</li>
+<li>さらに強い強調 (&lt;strong&gt;)</li>
+<li>打ち消し線 (&lt;s&gt;)</li>
+</ul>
+</li>
+</ul>
+<h3>現時点で非対応の記法</h3>
+<ul>
+<li>見出し
+<ul>
+<li>Atx-styleのうち、# を行末にも置く形のもの</li>
+<li>Underlined-styleのH1、H2見出し</li>
+</ul>
+</li>
+<li>画像挿入 (&lt;img&gt;タグに変換)
+</li>
+<li>Automatic Link</li>
+<li>テーブル</li>
+<li>バッククォート3つの行によって囲むコードブロック</li>
+</ul>
+<h3>このプログラムが役に立ちそうな場面</h3>
+<p>
+大がかりなMarkdown変換用プログラムをUNIX系のシステムにインストールできないが、とりあえずgawkの処理系があって、16KB程度のawkプログラムであれば送り込めるだけの余地があるという<em>極限的状況</em>であれば利用する価値が出てきます。豊かな環境であれば他のソフトを使った方が良いです。
+</p>
+<p>
+世の中にはMarkdownをプレビュー、変換できるソフトウェアが数多くあります。他形式の文書ファイルに変換したい場合はpandocを用いると大変便利ですし、単に編集・プレビューするなら、Visual Studio Codeなど多数の優れた無料ソフトがあります。
+</p>
+<p>
+ソフトの中にはWYSIWYG対応のものもあり、こちらはMarkdownエディタというより、文章に見出しや強調をつけたり、箇条書きをしたものをMarkdown形式で保存できる文書作成ソフトといった感じになります。Markdown対応のオンラインの文書作成管理サービスも多数あります。</p>
+                </div>
+                <footer class="post-footer">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                </footer>
+            </div>
+        </div>
+        <div class="page-bottom">
+            <div class="bottom-container">
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <p class="copyright">Copyright(c) 2020-2023 麦（青竹） All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="js/article-func-button.js"></script>
+    </body>
+</html>

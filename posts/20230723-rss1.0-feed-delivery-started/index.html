@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>RSS 1.0フィード配信スタート | 青竹雑記帖（5代目）</title>
+        <base href="https://blog.aotake91.net/">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese">
+    </head>
+    <body class="post">
+        <header class="page-header">
+            <div class="header-container">
+                <h1 class="header-logo">
+                    <a href="index.html"><img src="img/blog-newlogo.svg" alt="青竹雑記帖"></a>
+                </h1>
+                <p class="blog-description">デザイン洗練継続中</p>
+            </div>
+        </header>
+        <div class="breadcrumb">
+            <div class="bc-container">
+                <ul class="nav-link">
+                    <li><a href="archives/">記事一覧</a></li>
+                    <li><a href="https://aotake91.net/">『青竹荘』トップページ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-main">
+            <div class="main-container">
+                <header class="post-header">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <h1 id="article-title">RSS 1.0フィード配信スタート</h1>
+                <div class="func-buttons">
+                    <button id="copy-article-title-and-link-button" type="button">記事タイトルとURLをコピー</button>
+                </div>
+                <div class="metadata"><span class="post-date">投稿日: 2023.07.23</span> <span class="keywords">キーワード：<a href="keywords/PC.html">PC</a>, <a href="keywords/ソフトウェア.html">ソフトウェア</a></span></div>
+                </header>
+                <div class="post-contents">
+<p>
+こんばんは。化石技術大好きな青竹と申します。本日より当雑記帖（ブログ）にRSS 1.0を利用したフィードシステム（記事更新情報配信機能）を導入しました。
+</p>
+<h3>当雑記帖ではRSSをどのように配信しているか？</h3>
+<p>
+RSSを配信するには、ウェブサイトにRSSのフォーマットにのっとり、更新情報を記述したファイルを1個置けばOKです。もちろん、このファイルは記事の追加の際に更新する必要があります。このファイルを出力するために、RubyとRuby標準添付のライブラリを利用して、自分のブログシステムの記事一覧ファイルからRSSフィードのファイルを作成するスクリプトを作りました。これを手元のパソコンで動かしてファイルを生成し、人力でファイルを置いています。アドレスは次の通りです。
+</p>
+<p>
+https://blog.aotake91.net/blog.rdf
+</p>
+<p>
+上記URLをフィードリーダーにコピペしてください。雑記帖が月1～2回の更新なので、新着通知はめったに来ないと思いますが、毎度見に行く手間は省けると思います。
+</p>
+<h3>RSSとは？</h3>
+<p>
+RSSは、ニュースやブログ等、各種のウェブサイトの更新情報を配信するための文書フォーマットの総称であり（by <a href="https://ja.wikipedia.org/wiki/RSS">Wikipedia</a>）、このRSS形式のドキュメントを用いて情報配信する仕組みをRSSフィードと呼んだりします。
+</p>
+<p>
+各種のSNSやキュレーションシステムが発達する前、2000年代後半から2010年代前半は、各種のウェブサイトから配信されるRSSをRSSリーダー（フィードリーダー）により購読し、更新情報をプッシュ型に近い形で受信する手法が、リアルタイムにネット上のニュースを受け取るのによく用いられていました。RSSリーダーはこの時期のウェブブラウザに標準搭載されていたほか、ウェブサービス（Google Readerなど）によっても提供されており、各ウェブサイトを訪問せずとも、更新情報を受け取れる利点がありました。
+</p>
+<p>
+しかし、SNSの発展により、RSS（フィード）に頼らずとも、各個人・機関が発信したものをリアルタイムに受け取れるような仕組みが代替されたことから、RSSの需要は小さくなりました。2013年にはGoogle Readerがサービスを終了し、その後、2018年にはFirefoxがフィードリーダー機能を廃止しました。
+</p>
+<p>
+2020年代では、各サイトがRSSの配信をやめてしまったり、配信していても表に大々的に宣伝しなくなったりして、情報収集をサポートする技術としての認知度は決して高いものではなくなりました。しかし、少し復活の兆しが出ているのでは？　と期待をしているところです。現役のRSSリーダーは次のようなものがあります。
+</p>
+<ul>
+<li>ウェブサービス系
+<ul>
+<li><a href="https://feedly.com/">Feedly</a></li>
+<li><a href="https://www.inoreader.com/">Inoreader</a></li>
+</ul>
+</li>
+<li>ブラウザのアドオン（拡張機能）
+<ul>
+<li><a href="https://nodetics.com/feedbro/">Feedbro</a>: 主要ブラウザ対応</li>
+</ul>
+</li>
+<li>ブラウザ統合
+<ul>
+<li>Google Chrome: 実装準備中であるらしい（まだボタンがあるだけで表示不可）</li>
+</ul>
+</li>
+</ul>
+<h3>2023年7月現在、RSSを配信している主なサイト（日本国内）</h3>
+<p>
+今日調べたところ、各省庁のウェブサイトの更新情報、ITmediaの幅広いコンテンツ、はてなブログの各ブログの記事更新情報自動配信（ブログごとに選択して購読可）、Impressの各サイト（窓の杜など）、Yahoo!ニュースがRSSを配信しています。</p>
+                </div>
+                <footer class="post-footer">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                </footer>
+            </div>
+        </div>
+        <div class="page-bottom">
+            <div class="bottom-container">
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <p class="copyright">Copyright(c) 2020-2023 麦（青竹） All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="js/article-func-button.js"></script>
+    </body>
+</html>
