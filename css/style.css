@@ -160,6 +160,11 @@ a {
     text-decoration-line: none;
 }
 
+.main-container .post-contents table {
+    border-collapse: collapse;
+    line-height: 1.5em;
+}
+
 .archivepage .main-container {
     padding: 0 4% 0 4%;
 }
@@ -288,4 +293,13 @@ a {
     font-size: .75rem;
     color: #646464;
     text-align: center;
+}
+
+th {
+    border-top: 2px solid #303030;
+    border-bottom: 1px solid #303030;
+}
+
+tr:last-child td {
+    border-bottom: 1px solid #303030;
 }
