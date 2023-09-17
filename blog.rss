@@ -14,6 +14,7 @@
     <description>交通全般（鉄道・バス・航空機・船舶）、情報技術（テキストデータ処理が中心）について主に喋ります</description>
     <items>
       <rdf:Seq>
+        <rdf:li resource="https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20230708-markdown-translator-updated/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20230702-twitter-perished/"/>
@@ -33,11 +34,17 @@
         <rdf:li resource="https://blog.aotake91.net/posts/20210702-problem-of-ekinet/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210701-planning-to-daily-update/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210628-website-renewal-plan/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210531-blog-system-updated/"/>
       </rdf:Seq>
     </items>
-    <dc:date>2023-07-23T00:00:00+09:00</dc:date>
+    <dc:date>2023-09-18T00:00:00+09:00</dc:date>
   </channel>
+  <item rdf:about="https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/">
+    <title>九州大学伊都キャンパスと昭和バス九州大学線の来し方</title>
+    <link>https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/</link>
+    <description>昭和バス九州大学線の初期から今までを知る人間の昔語りです。
+</description>
+    <dc:date>2023-09-18T00:00:00+09:00</dc:date>
+  </item>
   <item rdf:about="https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/">
     <title>RSS 1.0フィード配信スタート</title>
     <link>https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/</link>
@@ -170,12 +177,5 @@
     <description>ウェブサイト構築手法の再検討をはじめました。
 </description>
     <dc:date>2021-06-28T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210531-blog-system-updated/">
-    <title>ブログシステム改造</title>
-    <link>https://blog.aotake91.net/posts/20210531-blog-system-updated/</link>
-    <description>ブログシステムを改造しました
-</description>
-    <dc:date>2021-05-31T00:00:00+09:00</dc:date>
   </item>
 </rdf:RDF>
