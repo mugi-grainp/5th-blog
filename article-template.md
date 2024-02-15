@@ -1,7 +1,7 @@
 ---
-postdate: 2021.09.04
-keywords: 
-copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
+postdate: 2023.09.18
+keywords:
+copyright: Copyright(c) 2020-2023 麦（青竹） All rights reserved.
 summary: ローカル側スクリプトのテスト
 ---
 

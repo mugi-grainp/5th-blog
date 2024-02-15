@@ -275,15 +275,16 @@ a {
     text-align: center;
 }
 
-.post-contents > *::first-child {
-    margin-top: 0;
-}
-
 .post-contents p {
     margin: 30px 0;
     line-height: 1.9;
     text-align: justify;
 }
+
+.post-contents p:first-child {
+    margin-top: 0;
+}
+
 
 .post-contents li {
     line-height: 1.9;
@@ -302,4 +303,64 @@ th {
 
 tr:last-child td {
     border-bottom: 1px solid #303030;
+}
+
+/* 画像を貼る時の設定 */
+@media screen and (min-width: 460px) {
+    .photo-area {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        row-gap: 1em;
+        column-gap: 1.5em;
+    }
+}
+
+.photo-area img {
+    width: 100%;
+    border: 1px solid darkorange;
+}
+
+.photo-2column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0;
+    column-gap: 0.5em;
+}
+
+.photo-2column-tateyoko {
+    display: grid;
+    grid-template-columns: 13fr 23fr;
+    row-gap: 0;
+    column-gap: 0.5em;
+}
+
+.highlight {
+    text-decoration: underline;
+    text-decoration-color: #FFD700;
+    text-decoration-thickness: 0.5em;
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+}
+
+.bgcolor-subway {
+	background-color: #AFDDFA;
+}
+
+h3, h4 {
+    margin-top: 0;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+ol#footnotes li {
+	list-style: none;
+	text-indent: -2.5em;
+	counter-increment: cnt;
+	font-size: smaller;
+}
+
+ol#footnotes li::before {
+	content: "※" counter(cnt) " : ";
 }

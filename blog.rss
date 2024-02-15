@@ -14,6 +14,9 @@
     <description>交通全般（鉄道・バス・航空機・船舶）、情報技術（テキストデータ処理が中心）について主に喋ります</description>
     <items>
       <rdf:Seq>
+        <rdf:li resource="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/"/>
+        <rdf:li resource="https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/"/>
+        <rdf:li resource="https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20230708-markdown-translator-updated/"/>
@@ -31,13 +34,31 @@
         <rdf:li resource="https://blog.aotake91.net/posts/20210706-operation-report-progress/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210704-nishitetsu-railway-update/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210703-jr-ticket-rule/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210702-problem-of-ekinet/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210701-planning-to-daily-update/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210628-website-renewal-plan/"/>
       </rdf:Seq>
     </items>
-    <dc:date>2023-09-18T00:00:00+09:00</dc:date>
+    <dc:date>2024-02-15T23:41:55.975083+09:00</dc:date>
   </channel>
+  <item rdf:about="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/">
+    <title>唐津線3駅探検その2 - 中多久駅</title>
+    <link>https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/</link>
+    <description>国鉄職員だった祖父ゆかりの路線・唐津線の駅探検の2本目です。
+</description>
+    <dc:date>2024-02-15T23:40:00+09:00</dc:date>
+  </item>
+  <item rdf:about="https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/">
+    <title>唐津線3駅探検その1 - 厳木駅</title>
+    <link>https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/</link>
+    <description>国鉄職員だった祖父ゆかりの路線・唐津線の駅を探検しました。
+</description>
+    <dc:date>2024-02-12T23:55:00+09:00</dc:date>
+  </item>
+  <item rdf:about="https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/">
+    <title>WindowsでUNIXコマンドを手軽に使う環境整備（BusyBox編）</title>
+    <link>https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/</link>
+    <description>WindowsでUNIXコマンドを使うよい手法を模索し、BusyBoxを試しました。
+</description>
+    <dc:date>2024-01-14T00:00:00+09:00</dc:date>
+  </item>
   <item rdf:about="https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/">
     <title>九州大学伊都キャンパスと昭和バス九州大学線の来し方</title>
     <link>https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/</link>
@@ -156,26 +177,5 @@
     <description>JRの乗車券発売規則をさらりと見ていきます。
 </description>
     <dc:date>2021-07-03T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210702-problem-of-ekinet/">
-    <title>新えきねっとの問題観察</title>
-    <link>https://blog.aotake91.net/posts/20210702-problem-of-ekinet/</link>
-    <description>新えきねっとの問題を考えてみます。
-</description>
-    <dc:date>2021-07-02T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210701-planning-to-daily-update/">
-    <title>毎日更新を計画する巻</title>
-    <link>https://blog.aotake91.net/posts/20210701-planning-to-daily-update/</link>
-    <description>久々に毎日更新を志します。
-</description>
-    <dc:date>2021-07-01T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210628-website-renewal-plan/">
-    <title>ウェブサイト構築再検討</title>
-    <link>https://blog.aotake91.net/posts/20210628-website-renewal-plan/</link>
-    <description>ウェブサイト構築手法の再検討をはじめました。
-</description>
-    <dc:date>2021-06-28T00:00:00+09:00</dc:date>
   </item>
 </rdf:RDF>

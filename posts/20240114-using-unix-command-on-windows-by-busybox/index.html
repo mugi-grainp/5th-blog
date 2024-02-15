@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>WindowsでUNIXコマンドを手軽に使う環境整備（BusyBox編） | 青竹雑記帖（5代目）</title>
+        <base href="https://blog.aotake91.net/">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese">
+    </head>
+    <body class="post">
+        <header class="page-header">
+            <div class="header-container">
+                <h1 class="header-logo">
+                    <a href="index.html"><img src="img/blog-newlogo.svg" alt="青竹雑記帖"></a>
+                </h1>
+                <p class="blog-description">デザイン洗練継続中</p>
+            </div>
+        </header>
+        <div class="breadcrumb">
+            <div class="bc-container">
+                <ul class="nav-link">
+                    <li><a href="archives/">記事一覧</a></li>
+                    <li><a href="https://aotake91.net/">『青竹荘』トップページ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-main">
+            <div class="main-container">
+                <header class="post-header">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <h1 id="article-title">WindowsでUNIXコマンドを手軽に使う環境整備（BusyBox編）</h1>
+                <div class="func-buttons">
+                    <button id="copy-article-title-and-link-button" type="button">記事タイトルとURLをコピー</button>
+                </div>
+                <div class="metadata"><span class="post-date">投稿日: 2024.01.14</span> <span class="keywords">キーワード：<a href="keywords/keywords:.html">keywords:</a></span></div>
+                </header>
+                <div class="post-contents">
+<h3>近況報告（わたしはげんきです）</h3>
+<p>
+気付けば前回の記事を書いてから4か月が経ってしまっていました。寝たり起きたりご飯やお菓子を食べたり、世の中のニュースや天変地異に驚いたりしていたらもう1月も半分過ぎようとしています。時の流れが速いです。
+</p>
+<h3>でもPCはげんきじゃありませんでした</h3>
+<p>
+その時の流れの中で、職場のパソコンが急に昇天したり、自宅のパソコンが急に昇天しかかったのでWindowsを再インストールするなど環境再構築を繰り返していました。
+</p>
+<p>
+自宅の環境はフルスペックの開発ができるようにするため、Windows Subsystem for Linux (WSL)やUbuntu仮想マシンなどの環境を手間暇かけて整えていましたが、職場のパソコンではまだ再整備できていません。
+</p>
+<p>
+職場のパソコンにもWSLを入れようと考えていたところでしたが、あれは地味に面倒で、しかもWSLからWindowsのファイルシステムを操作するとスリーテンポくらい遅くなるので精神衛生上良くありません。ビルドとかしなくていいからWindowsの環境でUNIXコマンド群だけサクッと使いたいなー……
+</p>
+<h3>BusyBoxによるUNIXコマンド環境構築</h3>
+<p>
+……と思って調べてようやく知ったのがBusyBoxでした。BusyBoxの存在はだいぶ前から知っていましたが、WindowsでのUNIXコマンド実行環境整備にも使えるとは今の今まで知らなかったので、新年早々またひとつ賢くなりました。よきかなよきかな。
+</p>
+<h4>1. BusyBoxのダウンロード</h4>
+<p>
+<a href="https://frippery.org/busybox/">BusyBoxの公式サイト</a>ではLinux版およびそのソースコードのみが入手可能ですので、Windows向けのバイナリを<a href="https://frippery.org/busybox/">busybox-w32の配布サイト</a>から入手します。最近のWindowsは64ビット環境ですので、busybox64.exeの方をダウンロードすると良いです。
+</p>
+<p>
+Windows 10や11を利用していて、UTF-8のファイルを主に扱うなど、PowerShellのコンソール出力もUTF-8に揃えてしまっても良い場合は、busybox64u.exeを利用した方が面倒がないかもしれません。
+</p>
+<h4>2. BusyBox実行ファイルの配置とPath設定</h4>
+<p>
+ダウンロードしたbusybox64.exeを適当なディレクトリ（フォルダ）に配置し、そのディレクトリをWindowsのユーザー環境変数「Path」に加えるとインストール完了です。環境変数設定手順は次の通りです。
+</p>
+<ol>
+<li>「設定 > システム > バージョン情報 > システムの詳細設定」と選んで「システムのプロパティ」画面を出す。</li>
+<li>「システムのプロパティ」画面で「環境変数」ボタンをクリックし、環境変数の一覧画面を出す。</li>
+<li>画面の「ユーザー環境変数」と書かれた欄の側にある「Path」を選択し、「編集」ボタンをクリックする。</li>
+<li>クリックして出てきた画面で「新規」ボタンをクリックし、出てきた欄にbusybox64.exeの配置ディレクトリへのパスを記載する。</li>
+</ol>
+<p>
+PowerShellを開き直すとBusyBoxが持つコマンドが使えるようになります。 <code>busybox64</code>に続いて、呼び出したいコマンドを書きます。
+</p>
+<pre><code>
+C:\Users\hogehoge\Documents> busybox64 uname -a
+Windows_NT HOGEHUGA-PC 10.0 22631 x86_64 MS/Windows
+</code></pre>
+<p>
+呼び出せるコマンドの一覧は <code>busybox64 --list</code> を実行すると表示できます。
+</p>
+<h4>3. コマンド呼び出し用リンクの作成（オプション）</h4>
+<p>
+busybox-w32の作者はこのリンク作成を「コマンドとして用意はしているが推奨しない」と述べており、上記のように頭に <code>busybox64</code> を付けて呼び出すか、BusyBoxでシェル (ash)を起動してから各種コマンドを実行するのが最も良いとの見解を示しています。
+</p>
+<p>
+その理由のひとつとして、PowerShellとBusyBoxで同一名称のコマンドエイリアスがあった際に、基本的にはPowerShellのエイリアスが優先して呼ばれるため、思った通りの実行ができなくなる可能性があるからではないかと考えられます。
+</p>
+<p>
+BusyBoxを配置したフォルダ以下にコマンド呼び出し用のリンクを作成する場合、busybox64.exeをディレクトリC:\Users\hogehoge\BusyBox に置いた場合は、PowerShellで次のコマンドを実行してください。
+</p>
+<pre><code>
+C:\Users\hogehoge\BusyBox> busybox64 --install .\bin
+</code></pre>
+<p>
+これにより、C:\Users\hogehoge\BusyBox\binのディレクトリにBusyBoxが持つコマンドへのリンクが生成され、頭に <code>busybox64</code> と付けずにコマンド名だけで実行できるようになります。
+</p>
+<h3>PowerShell表示が文字化けした場合</h3>
+<p>
+Windowsの日本語環境は、今もShift_JIS (CP932) とUnicodeが入り交じるような形となっており、Unicode (とりわけUTF-8エンコーディング) のテキストファイルをPowerShellで扱おうとすると画面表示が文字化けすることがあります。画面表示が文字化けするだけでファイルの処理自体は行えていて、ファイルを別のテキストエディタ等で開くとUTF-8で普通に読めますが、画面できちんと見たい場合はいくつか対策をする必要があります。
+</p>
+<h4>(1) PowerShellの出力表示をUTF-8にして、BusyBoxのUnicode対応版を使う</h4>
+<p>
+最初のセクションで述べた、BusyBoxのUnicode対応版 (busybox64u.exe) をダウンロードして配置します。次にPowerShellで次のコマンドを実行して、出力をUTF-8に変更してください。
+</p>
+<pre><code>
+[Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding('utf-8')
+</code></pre>
+<p>
+設定を常に有効にするには、上記のコマンドをPowerShellプロファイルに記載します。PowerShellのコマンドラインから <code>notepad $PROFILE</code> を実行するとプロファイルが開かれるので、このコマンドを追記してください。
+</p>
+<h4>(2) BusyBoxの従来版を利用しつつ、画面表示の方だけをShift_JISに変更する</h4>
+<p>
+他のプログラムとの兼ね合いでPowerShellの出力エンコーディングを変更できない場合は、パイプ機能とiconvコマンドにより、処理結果を画面に出す部分だけをShift_JISに変更することができます。一例として、UTF-8のまま画面に出力されてしまうコマンドsample-cmd1 があった場合、次のコマンドで文字化けを直して表示できます。
+</p>
+<pre><code>
+sample-cmd1 | iconv -c -f utf8 -t sjis
+</code></pre>
+<p>
+iconvコマンドに -c オプションを指定することで、UTF-8からShift_JISに変換できない文字が出現した場合にも処理を止めずに文字を飛ばして続行できます。UTF-8による正しい出力を別ファイルに保持して確認したい場合は、
+</p>
+<pre><code>
+sample-cmd1 > output-log-utf8.txt
+</code></pre>
+<p>
+あるいは、
+</p>
+<pre><code>
+sample-cmd1 | tee output-log-utf8.txt | iconv -c -f utf8 -t sjis
+</code></pre>
+<p>
+とすると、output-log-utf8.txtにUTF-8で記録された出力が得られ、確認できます。
+</p>
+<p>
+なお、後者のteeコマンドを呼び出す時、PowerShellの環境だとPowerShellのコマンドレットTee-Object のエイリアスとして認識され、意図した通りの挙動が実現されないことがあります。その時はashを起動して実行するか、 <code>busybox64 tee</code> と書き換えて、明示的にBusyBoxのteeを呼び出してみてください。
+</p>
+<h3>課題</h3>
+<p>
+BusyBoxをWindows上で動かす場合、いくつか互換性がない仕様があります。
+</p>
+<ul>
+<li>UNIXでの実行を前提にしたシェルスクリプトを実行しようとすると、ディレクトリ構造やデバイス定義の違いによりエラーが出る。
+<ul>
+<li><code>/dev/urandom</code> を明示的に呼び出している場合 → 別の乱数・ランダム文字列生成法への置き換えを試みる</li>
+<li>一時ファイルディレクトリとして <code>/tmp</code> を明示的に呼び出している場合 → <code>mktemp</code> を使って一時ファイルディレクトリを用意するよう変更</li>
+</ul>
+</li>
+</ul>
+<p>
+上記の課題が出てくるプログラムを作成実行する場面に遭遇したら、おそらくWSLやLinux仮想マシンを構築するに値する状況であると思われますので、本格的環境構築をおすすめします。</p>
+                </div>
+                <footer class="post-footer">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                </footer>
+            </div>
+        </div>
+        <div class="page-bottom">
+            <div class="bottom-container">
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <p class="copyright">Copyright(c) 2020-2024 麦（青竹） All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="js/article-func-button.js"></script>
+    </body>
+</html>
