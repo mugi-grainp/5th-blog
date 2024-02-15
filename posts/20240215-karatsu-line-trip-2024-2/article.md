@@ -11,7 +11,7 @@ summary: 国鉄職員だった祖父ゆかりの路線・唐津線の駅探検�
 
 ### まえがき
 
-前回：[唐津線3駅探検その1 - 厳木駅](https://blog.aotake91.net/posts/karatsu-line-trip-2024-2/)
+前回：[唐津線3駅探検その1 - 厳木駅](https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/)
 
 母方祖父が国鉄職員として勤めた唐津線の駅をまわった旅（2024年2月11日（日曜日））
 の紹介、第2回目は<ruby>中多久<rp>（</rp><rt>なかたく</rt><rp>）</rp></ruby>駅で
