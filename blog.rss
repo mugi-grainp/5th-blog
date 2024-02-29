@@ -14,6 +14,8 @@
     <description>交通全般（鉄道・バス・航空機・船舶）、情報技術（テキストデータ処理が中心）について主に喋ります</description>
     <items>
       <rdf:Seq>
+        <rdf:li resource="https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/"/>
+        <rdf:li resource="https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/"/>
@@ -32,12 +34,24 @@
         <rdf:li resource="https://blog.aotake91.net/posts/20210921-value-of-personal-site/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210803-about-train-operation-database/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210706-operation-report-progress/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210704-nishitetsu-railway-update/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210703-jr-ticket-rule/"/>
       </rdf:Seq>
     </items>
-    <dc:date>2024-02-15T23:41:55.975083+09:00</dc:date>
+    <dc:date>2024-02-25T23:51:39.445476+09:00</dc:date>
   </channel>
+  <item rdf:about="https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/">
+    <title>西鉄電車・太宰府方面案内試案（西鉄二日市駅）</title>
+    <link>https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/</link>
+    <description>西鉄二日市駅における太宰府方面の案内の難しさを解決してみようとしました。
+</description>
+    <dc:date>2024-02-25T23:50:00+09:00</dc:date>
+  </item>
+  <item rdf:about="https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/">
+    <title>唐津線3駅探検その3 - 山本駅</title>
+    <link>https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/</link>
+    <description>唐津線の駅探検の3本目です。
+</description>
+    <dc:date>2024-02-18T17:05:00+09:00</dc:date>
+  </item>
   <item rdf:about="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/">
     <title>唐津線3駅探検その2 - 中多久駅</title>
     <link>https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/</link>
@@ -163,19 +177,5 @@
     <description>車両運用表の進捗について報告です。
 </description>
     <dc:date>2021-07-06T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210704-nishitetsu-railway-update/">
-    <title>西鉄電車ダイヤ復活記念祭</title>
-    <link>https://blog.aotake91.net/posts/20210704-nishitetsu-railway-update/</link>
-    <description>西鉄電車（西日本鉄道）の近況報告です。ようやくダイヤが元に戻りました。
-</description>
-    <dc:date>2021-07-04T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210703-jr-ticket-rule/">
-    <title>JR旅客営業規則観察（続・新えきねっとの問題観察）</title>
-    <link>https://blog.aotake91.net/posts/20210703-jr-ticket-rule/</link>
-    <description>JRの乗車券発売規則をさらりと見ていきます。
-</description>
-    <dc:date>2021-07-03T00:00:00+09:00</dc:date>
   </item>
 </rdf:RDF>
