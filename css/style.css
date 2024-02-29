@@ -106,6 +106,7 @@ a {
 
 .metadata {
     text-align: right;
+    margin-bottom: 1rem;
 }
 
 .keywords {
@@ -256,6 +257,11 @@ a {
 .post .main-container {
     padding: 80px 4% 0 4%;
 }
+
+.main-container img {
+	max-width: 100%;
+}
+
 @media (min-width: 768px) {
     .post .main-container {
         max-width: 1040px;
@@ -363,4 +369,8 @@ ol#footnotes li {
 
 ol#footnotes li::before {
 	content: "※" counter(cnt) " : ";
+}
+
+.no-marker-list {
+	list-style: none;
 }
