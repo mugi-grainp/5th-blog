@@ -14,6 +14,7 @@
     <description>交通全般（鉄道・バス・航空機・船舶）、情報技術（テキストデータ処理が中心）について主に喋ります</description>
     <items>
       <rdf:Seq>
+        <rdf:li resource="https://blog.aotake91.net/posts/20240622-about-nnr-new-dia/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/"/>
@@ -33,11 +34,17 @@
         <rdf:li resource="https://blog.aotake91.net/posts/20210922-problem-of-windows-remote-desktop/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210921-value-of-personal-site/"/>
         <rdf:li resource="https://blog.aotake91.net/posts/20210803-about-train-operation-database/"/>
-        <rdf:li resource="https://blog.aotake91.net/posts/20210706-operation-report-progress/"/>
       </rdf:Seq>
     </items>
-    <dc:date>2024-02-25T23:51:39.445476+09:00</dc:date>
+    <dc:date>2024-06-22T00:33:11.880722+09:00</dc:date>
   </channel>
+  <item rdf:about="https://blog.aotake91.net/posts/20240622-about-nnr-new-dia/">
+    <title>西鉄ダイヤ改正（2024年3月16日改正）中間レポート</title>
+    <link>https://blog.aotake91.net/posts/20240622-about-nnr-new-dia/</link>
+    <description>西鉄電車新ダイヤの状況報告です。
+</description>
+    <dc:date>2024-06-22T00:28:00+09:00</dc:date>
+  </item>
   <item rdf:about="https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/">
     <title>西鉄電車・太宰府方面案内試案（西鉄二日市駅）</title>
     <link>https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/</link>
@@ -170,12 +177,5 @@
     <description>車両運用データベースシステムについてのまとめです。
 </description>
     <dc:date>2021-08-03T00:00:00+09:00</dc:date>
-  </item>
-  <item rdf:about="https://blog.aotake91.net/posts/20210706-operation-report-progress/">
-    <title>西鉄電車車両運用表本の進捗</title>
-    <link>https://blog.aotake91.net/posts/20210706-operation-report-progress/</link>
-    <description>車両運用表の進捗について報告です。
-</description>
-    <dc:date>2021-07-06T00:00:00+09:00</dc:date>
   </item>
 </rdf:RDF>

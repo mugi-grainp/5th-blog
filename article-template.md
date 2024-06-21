@@ -1,5 +1,5 @@
 ---
-postdate: 2023.09.18
+postdate: 2023.09.18 00:00:00
 keywords:
 copyright: Copyright(c) 2020-2023 麦（青竹） All rights reserved.
 summary: ローカル側スクリプトのテスト
