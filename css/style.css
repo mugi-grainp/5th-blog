@@ -318,6 +318,7 @@ tr:last-child td {
         grid-template-columns: 2fr 3fr;
         row-gap: 1em;
         column-gap: 1.5em;
+        margin-bottom: 1rem;
     }
 }
 
@@ -350,10 +351,6 @@ tr:last-child td {
 
 .bgcolor-subway {
 	background-color: #AFDDFA;
-}
-
-h3, h4 {
-    margin-top: 0;
 }
 
 hr {

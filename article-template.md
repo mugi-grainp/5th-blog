@@ -1,13 +1,14 @@
 ---
 postdate: 2023.09.18 00:00:00
-keywords:
-copyright: Copyright(c) 2020-2023 麦（青竹） All rights reserved.
-summary: ローカル側スクリプトのテスト
+keywords: キーワード1, キーワード2, キーワード3
+copyright: Copyright(c) 2020-2025 青竹 All rights reserved.
+summary: トップページや記事一覧ページに記載する要約分を記載。
 ---
 
-# plan-to-universal-design
+# yyyymmdd-article-path-name
 
-## ユニバーサルデザインへの道
+## 記事タイトル
 
-私は万人にとって読みやすい形で情報を発信していきたいと
+### 本文最上位見出し
 
+本文
