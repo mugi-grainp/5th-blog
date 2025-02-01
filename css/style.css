@@ -320,9 +320,16 @@ tr:last-child td {
         column-gap: 1.5em;
         margin-bottom: 1rem;
     }
+    .photo-area-2 {
+        display: grid;
+        grid-template-columns: 2fr 2fr 3fr;
+        row-gap: 1em;
+        column-gap: 1.5em;
+        margin-bottom: 1rem;
+    }
 }
 
-.photo-area img {
+.photo-area img, .photo-area-2 img {
     width: 100%;
     border: 1px solid darkorange;
 }

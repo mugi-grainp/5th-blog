@@ -5,7 +5,7 @@ copyright: Copyright(c) 2020-2025 青竹 All rights reserved.
 summary: トップページや記事一覧ページに記載する要約分を記載。
 ---
 
-# yyyymmdd-article-path-name
+# article-path-name
 
 ## 記事タイトル
 
