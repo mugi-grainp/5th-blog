@@ -12,150 +12,171 @@
   <title>青竹雑記帖（5代目）</title>
   <link>https://blog.aotake91.net/</link>
   <description>交通全般（鉄道・バス・航空機・船舶）、情報技術（テキストデータ処理が中心）について主に喋ります。</description>
+  <dc:language>ja</dc:language>
   <items>
     <rdf:Seq>
-      <rdf:li resource="https://blog.aotake91.net/posts//20250202-tsuko-sta-gate-renewal/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20250128-past-chikugo-ogori-sta-2025/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20240622-about-nnr-new-dia/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20240225-nishitestu-dazaifu-info/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20240218-karatsu-line-trip-2024-3/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20240215-karatsu-line-trip-2024-2/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20240212-karatsu-line-trip-2024-1/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20240114-using-unix-command-on-windows-by-busybox/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20230918-memory-of-showa-bus-kyushu-univ-line/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20230723-rss1.0-feed-delivery-started/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20230708-markdown-translator-updated/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20230702-twitter-perished/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20230527-5th-blog-returns/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20220610-blog-12th-anniversary/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20220609-kinkyou-and-mirai-202206/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20220315-comment-about-the-measures-of-jr-kyushu/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20220311-31st-birthday/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20220301-kinkyou-202203/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20211105-kinkyou-202111/" />
-      <rdf:li resource="https://blog.aotake91.net/posts//20210922-problem-of-windows-remote-desktop/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20250202-tsuko-sta-gate-renewal/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20250128-past-chikugo-ogori-sta-2025/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20240622-about-nnr-new-dia/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20230708-markdown-translator-updated/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20230702-twitter-perished/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20230527-5th-blog-returns/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20220610-blog-12th-anniversary/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20220609-kinkyou-and-mirai-202206/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20220315-comment-about-the-measures-of-jr-kyushu/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20220311-31st-birthday/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20220301-kinkyou-202203/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20211105-kinkyou-202111/" />
+      <rdf:li resource="https://blog.aotake91.net/posts/20210922-problem-of-windows-remote-desktop/" />
     </rdf:Seq>
   </items>
   <dc:date>2025-02-02T00:30:00+09:00</dc:date>
 </channel>
-<item rdf:about="https://blog.aotake91.net/posts//20250202-tsuko-sta-gate-renewal/">
+<item rdf:about="https://blog.aotake91.net/posts/20250202-tsuko-sta-gate-renewal/">
   <title>津古駅西口改札機更新工事記録</title>
-  <link>https://blog.aotake91.net/posts//20250202-tsuko-sta-gate-renewal/</link>
-  <description>津古駅に設置された入場・出場兼用IC簡易改札機の観察記録です。</description>
+  <link>https://blog.aotake91.net/posts/20250202-tsuko-sta-gate-renewal/</link>
+  <description><![CDATA[津古駅に設置された入場・出場兼用IC簡易改札機の観察記録です。]]></description>
   <dc:date>2025-02-02T00:30:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20250128-past-chikugo-ogori-sta-2025/">
+<item rdf:about="https://blog.aotake91.net/posts/20250128-past-chikugo-ogori-sta-2025/">
   <title>旧国鉄筑後小郡駅跡訪問（2025年）</title>
-  <link>https://blog.aotake91.net/posts//20250128-past-chikugo-ogori-sta-2025/</link>
-  <description>旧国鉄甘木線時代の筑後小郡駅跡を久々に見に行きました。</description>
+  <link>https://blog.aotake91.net/posts/20250128-past-chikugo-ogori-sta-2025/</link>
+  <description><![CDATA[旧国鉄甘木線時代の筑後小郡駅跡を久々に見に行きました。]]></description>
   <dc:date>2025-01-28T00:20:02+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20240622-about-nnr-new-dia/">
+<item rdf:about="https://blog.aotake91.net/posts/20240622-about-nnr-new-dia/">
   <title>西鉄ダイヤ改正（2024年3月16日改正）中間レポート</title>
-  <link>https://blog.aotake91.net/posts//20240622-about-nnr-new-dia/</link>
-  <description>西鉄電車新ダイヤの状況報告です。</description>
+  <link>https://blog.aotake91.net/posts/20240622-about-nnr-new-dia/</link>
+  <description><![CDATA[西鉄電車新ダイヤの状況報告です。]]></description>
   <dc:date>2024-06-22T00:28:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20240225-nishitestu-dazaifu-info/">
+<item rdf:about="https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/">
   <title>西鉄電車・太宰府方面案内試案（西鉄二日市駅）</title>
-  <link>https://blog.aotake91.net/posts//20240225-nishitestu-dazaifu-info/</link>
-  <description>西鉄二日市駅における太宰府方面の案内の難しさを解決してみようとしました。</description>
+  <link>https://blog.aotake91.net/posts/20240225-nishitestu-dazaifu-info/</link>
+  <description><![CDATA[西鉄二日市駅における太宰府方面の案内の難しさを解決してみようとしました。]]></description>
   <dc:date>2024-02-25T23:50:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20240218-karatsu-line-trip-2024-3/">
+<item rdf:about="https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/">
   <title>唐津線3駅探検その3 - 山本駅</title>
-  <link>https://blog.aotake91.net/posts//20240218-karatsu-line-trip-2024-3/</link>
-  <description>唐津線の駅探検の3本目です。</description>
+  <link>https://blog.aotake91.net/posts/20240218-karatsu-line-trip-2024-3/</link>
+  <description><![CDATA[唐津線の駅探検の3本目です。]]></description>
   <dc:date>2024-02-18T17:05:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20240215-karatsu-line-trip-2024-2/">
+<item rdf:about="https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/">
   <title>唐津線3駅探検その2 - 中多久駅</title>
-  <link>https://blog.aotake91.net/posts//20240215-karatsu-line-trip-2024-2/</link>
-  <description>国鉄職員だった祖父ゆかりの路線・唐津線の駅探検の2本目です。</description>
+  <link>https://blog.aotake91.net/posts/20240215-karatsu-line-trip-2024-2/</link>
+  <description><![CDATA[国鉄職員だった祖父ゆかりの路線・唐津線の駅探検の2本目です。]]></description>
   <dc:date>2024-02-15T23:40:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20240212-karatsu-line-trip-2024-1/">
+<item rdf:about="https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/">
   <title>唐津線3駅探検その1 - 厳木駅</title>
-  <link>https://blog.aotake91.net/posts//20240212-karatsu-line-trip-2024-1/</link>
-  <description>国鉄職員だった祖父ゆかりの路線・唐津線の駅を探検しました。</description>
+  <link>https://blog.aotake91.net/posts/20240212-karatsu-line-trip-2024-1/</link>
+  <description><![CDATA[国鉄職員だった祖父ゆかりの路線・唐津線の駅を探検しました。]]></description>
   <dc:date>2024-02-12T23:55:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20240114-using-unix-command-on-windows-by-busybox/">
+<item rdf:about="https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/">
   <title>WindowsでUNIXコマンドを手軽に使う環境整備（BusyBox編）</title>
-  <link>https://blog.aotake91.net/posts//20240114-using-unix-command-on-windows-by-busybox/</link>
-  <description>WindowsでUNIXコマンドを使うよい手法を模索し、BusyBoxを試しました。</description>
+  <link>https://blog.aotake91.net/posts/20240114-using-unix-command-on-windows-by-busybox/</link>
+  <description><![CDATA[WindowsでUNIXコマンドを使うよい手法を模索し、BusyBoxを試しました。]]></description>
   <dc:date>2024-01-14T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20230918-memory-of-showa-bus-kyushu-univ-line/">
+<item rdf:about="https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/">
   <title>九州大学伊都キャンパスと昭和バス九州大学線の来し方</title>
-  <link>https://blog.aotake91.net/posts//20230918-memory-of-showa-bus-kyushu-univ-line/</link>
-  <description>昭和バス九州大学線の初期から今までを知る人間の昔語りです。</description>
+  <link>https://blog.aotake91.net/posts/20230918-memory-of-showa-bus-kyushu-univ-line/</link>
+  <description><![CDATA[昭和バス九州大学線の初期から今までを知る人間の昔語りです。]]></description>
   <dc:date>2023-09-18T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20230723-rss1.0-feed-delivery-started/">
+<item rdf:about="https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/">
   <title>RSS 1.0フィード配信スタート</title>
-  <link>https://blog.aotake91.net/posts//20230723-rss1.0-feed-delivery-started/</link>
-  <description>RSS 1.0フィードなるものの配信を導入してみました。</description>
+  <link>https://blog.aotake91.net/posts/20230723-rss1.0-feed-delivery-started/</link>
+  <description><![CDATA[RSS 1.0フィードなるものの配信を導入してみました。]]></description>
   <dc:date>2023-07-23T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20230708-markdown-translator-updated/">
+<item rdf:about="https://blog.aotake91.net/posts/20230708-markdown-translator-updated/">
   <title>Markdownファイルを処理できるAWKのスクリプトを改良しました</title>
-  <link>https://blog.aotake91.net/posts//20230708-markdown-translator-updated/</link>
-  <description>世界の8割のMarkdownを処理できるかもしれないような、スクリプト改良ができました。</description>
+  <link>https://blog.aotake91.net/posts/20230708-markdown-translator-updated/</link>
+  <description><![CDATA[世界の8割のMarkdownを処理できるかもしれないような、スクリプト改良ができました。]]></description>
   <dc:date>2023-07-08T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20230702-twitter-perished/">
+<item rdf:about="https://blog.aotake91.net/posts/20230702-twitter-perished/">
   <title>Twitterが今度こそ滅亡してしまったかもしれません</title>
-  <link>https://blog.aotake91.net/posts//20230702-twitter-perished/</link>
-  <description>今度こそTwitterの利用者が離れ、みなバラバラになるんでしょうか。</description>
+  <link>https://blog.aotake91.net/posts/20230702-twitter-perished/</link>
+  <description><![CDATA[今度こそTwitterの利用者が離れ、みなバラバラになるんでしょうか。]]></description>
   <dc:date>2023-07-02T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20230527-5th-blog-returns/">
+<item rdf:about="https://blog.aotake91.net/posts/20230527-5th-blog-returns/">
   <title>ブログを再び5代目システムに戻してみます</title>
-  <link>https://blog.aotake91.net/posts//20230527-5th-blog-returns/</link>
-  <description>どのサービスを使ってブログを運営するか再度考え、ひとまず5代目に戻してみます。</description>
+  <link>https://blog.aotake91.net/posts/20230527-5th-blog-returns/</link>
+  <description><![CDATA[どのサービスを使ってブログを運営するか再度考え、ひとまず5代目に戻してみます。]]></description>
   <dc:date>2023-05-27T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20220610-blog-12th-anniversary/">
+<item rdf:about="https://blog.aotake91.net/posts/20220610-blog-12th-anniversary/">
   <title>青竹雑記帖12周年の記</title>
-  <link>https://blog.aotake91.net/posts//20220610-blog-12th-anniversary/</link>
-  <description>私のブログが12周年を迎えました。</description>
+  <link>https://blog.aotake91.net/posts/20220610-blog-12th-anniversary/</link>
+  <description><![CDATA[私のブログが12周年を迎えました。]]></description>
   <dc:date>2022-06-10T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20220609-kinkyou-and-mirai-202206/">
+<item rdf:about="https://blog.aotake91.net/posts/20220609-kinkyou-and-mirai-202206/">
   <title>近況報告と将来の進路（2022年6月）</title>
-  <link>https://blog.aotake91.net/posts//20220609-kinkyou-and-mirai-202206/</link>
-  <description>道を作っています。</description>
+  <link>https://blog.aotake91.net/posts/20220609-kinkyou-and-mirai-202206/</link>
+  <description><![CDATA[道を作っています。]]></description>
   <dc:date>2022-06-09T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20220315-comment-about-the-measures-of-jr-kyushu/">
+<item rdf:about="https://blog.aotake91.net/posts/20220315-comment-about-the-measures-of-jr-kyushu/">
   <title>JR九州の諸施策についての思い</title>
-  <link>https://blog.aotake91.net/posts//20220315-comment-about-the-measures-of-jr-kyushu/</link>
-  <description>JR九州（九州旅客鉄道）で進む諸施策について、まずは一利用者としての所感を述べます。</description>
+  <link>https://blog.aotake91.net/posts/20220315-comment-about-the-measures-of-jr-kyushu/</link>
+  <description><![CDATA[JR九州（九州旅客鉄道）で進む諸施策について、まずは一利用者としての所感を述べます。]]></description>
   <dc:date>2022-03-15T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20220311-31st-birthday/">
+<item rdf:about="https://blog.aotake91.net/posts/20220311-31st-birthday/">
   <title>31歳の誕生日</title>
-  <link>https://blog.aotake91.net/posts//20220311-31st-birthday/</link>
-  <description>31歳冒頭所感を申し上げます。</description>
+  <link>https://blog.aotake91.net/posts/20220311-31st-birthday/</link>
+  <description><![CDATA[31歳冒頭所感を申し上げます。]]></description>
   <dc:date>2022-03-11T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20220301-kinkyou-202203/">
+<item rdf:about="https://blog.aotake91.net/posts/20220301-kinkyou-202203/">
   <title>年度末の近況報告</title>
-  <link>https://blog.aotake91.net/posts//20220301-kinkyou-202203/</link>
-  <description>久しぶりに近況報告です。</description>
+  <link>https://blog.aotake91.net/posts/20220301-kinkyou-202203/</link>
+  <description><![CDATA[久しぶりに近況報告です。]]></description>
   <dc:date>2022-03-01T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20211105-kinkyou-202111/">
+<item rdf:about="https://blog.aotake91.net/posts/20211105-kinkyou-202111/">
   <title>近況報告（2021年11月）</title>
-  <link>https://blog.aotake91.net/posts//20211105-kinkyou-202111/</link>
-  <description>久しぶりの近況報告です。</description>
+  <link>https://blog.aotake91.net/posts/20211105-kinkyou-202111/</link>
+  <description><![CDATA[久しぶりの近況報告です。]]></description>
   <dc:date>2021-11-05T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
-<item rdf:about="https://blog.aotake91.net/posts//20210922-problem-of-windows-remote-desktop/">
+<item rdf:about="https://blog.aotake91.net/posts/20210922-problem-of-windows-remote-desktop/">
   <title>Windowsリモートデスクトップ接続に苦労した話</title>
-  <link>https://blog.aotake91.net/posts//20210922-problem-of-windows-remote-desktop/</link>
-  <description>リモートデスクトップ接続が1か月ごしにようやく実現しました。</description>
+  <link>https://blog.aotake91.net/posts/20210922-problem-of-windows-remote-desktop/</link>
+  <description><![CDATA[リモートデスクトップ接続が1か月ごしにようやく実現しました。]]></description>
   <dc:date>2021-09-22T00:00:00+09:00</dc:date>
+  <dc:creator>青竹 (aotake91)</dc:creator>
 </item>
 </rdf:RDF>
