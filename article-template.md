@@ -1,7 +1,7 @@
 ---
 postdate: 2023.09.18 00:00:00
 keywords: キーワード1, キーワード2, キーワード3
-copyright: Copyright(c) 2020-2025 青竹 All rights reserved.
+copyright: Copyright(c) 青竹 All rights reserved.
 summary: トップページや記事一覧ページに記載する要約分を記載。
 ---
 
