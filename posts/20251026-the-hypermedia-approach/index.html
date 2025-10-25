@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>ハイパーメディアというアプローチ | 青竹雑記帖（5代目）</title>
+        <link rel="icon" href="https://blog.aotake91.net/favicon.ico">
+        <link rel="stylesheet" href="https://blog.aotake91.net/css/normalize.css">
+        <link rel="stylesheet" href="https://blog.aotake91.net/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese">
+    </head>
+    <body class="post">
+        <header class="page-header">
+            <div class="header-container">
+                <h1 class="header-logo">
+                    <a href="https://blog.aotake91.net/index.html"><img src="https://blog.aotake91.net/img/blog-newlogo.svg" alt="青竹雑記帖"></a>
+                </h1>
+                <p class="blog-description">デザイン洗練継続中</p>
+            </div>
+        </header>
+        <div class="breadcrumb">
+            <div class="bc-container">
+                <ul class="nav-link">
+                    <li><a href="https://blog.aotake91.net/archives/">記事一覧</a></li>
+                    <li><a href="https://aotake91.net/">『青竹荘』トップページ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-main">
+            <div class="main-container">
+                <header class="post-header">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt; 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <h1 id="article-title">ハイパーメディアというアプローチ</h1>
+                <div class="func-buttons">
+                    <button id="copy-article-title-and-link-button" type="button">記事タイトルとURLをコピー</button>
+                </div>
+                <div class="metadata"><span class="post-date">投稿日: 2025.10.26</span> <span class="keywords">キーワード：<a href="keywords/IT.html">IT</a>, <a href="keywords/ハイパーメディア.html">ハイパーメディア</a></span></div>
+                </header>
+                <div class="post-contents">
+<p>
+かなり久々のブログ更新となりました。Twitterでは日々諸々を垂れ流し、pixivには大量の妄想文章を吐き出しています。
+</p>
+<hr>
+<h3>前口上</h3>
+<p>
+私の本業はITエンジニアです。今のところ、アプリケーション部分のバックエンドからフロントエンドまでを担当している、ソフトウェア寄りが守備範囲の人間です。今年春からの案件で初めてフロントエンドのJavaScriptフレームワーク・Reactを触ることになりました。
+</p>
+<p>
+<strong style="font-size:130%; color:orangered;">……あれ、なんか面倒くさいですね？</strong>
+</p>
+<h3>Reactこわい（マジで）</h3>
+<p>
+今担当している案件は他社で開発されていたものが巡り巡ってうちにお鉢が回ってきたシステムの改修案件です。バックエンドロジックについては妙に細かい仕様書（実質的にコーディング指示書）がある一方、フロントエンドはイメージ図と要件仕様書だけで設計書が全く存在しないという両極端な案件です。
+</p>
+<p>
+設計書がない、そしてReact初心者というダブルの不利を受け、単純そうな改修に1週間を要してしまいました。改修を通して構造を一定程度理解して振り返ったら、1日でカタがつくようなレベルでした。次回からは秒殺で処理します。
+</p>
+<p>
+初心者である以上、何重にも階層化されたReactコンポーネントの構成がベストプラクティスなのかゴミなのかの判別もつかない、すなわち元のコードがダメなのか、それともReactの宿命なのかはわかりませんが、とにかくアレはちょっと触りたくないです。
+</p>
+<p>
+……仕事として片付けなければならない以上やりはしますが、なぜあれがフロントエンドを構築するのに有力な技術となったのかよく分からないというのが正直な感想です。なんとかなりませんかね。
+</p>
+<h3>ハイパーメディアシステム？</h3>
+<p>
+そう考えているところに、技術評論社の「Software Design」の本の紹介ページに『<a href="https://gihyo.jp/book/2025/978-4-297-14945-1">ハイパーメディアシステム htmxとRESTによるシンプルで軽やかなウェブ開発</a>』という本を見つけました。表紙に「『React疲れ』していませんか？」という問いかけの言葉が書かれていたのが決め手でした。
+</p>
+<p>
+本の半分ほどはこの本の著者が開発したJavaScriptライブラリ「htmx」を解説する書となっていますが、本の冒頭はそこに至るまでの道筋として、ハイパーメディアシステム（World Wide Web / HTML / HTTP / 本来の意味でのREST）に再入門します。そこで現代のウェブを席巻するJavaScriptベースのシングルページアプリケーション（SPA）との対比を行いつつ、ハイパーメディアシステムの各構成要素を拡張するアプローチを示し、ハイパーメディアシステムを大いに活用することで、多くの分野でSPAよりもシンプルな手法でアプリケーションを構築できることを述べています。
+</p>
+<h3>短い感想</h3>
+<p>
+実は「htmx」は、その単語を初めて聞いた2024年2月頃に一瞬だけ触ったことがありました。その時は仕事が忙しかったのもあってすぐに忘れてしまいましたが、時を経て再度勉強し、試してみると、とても面白そうだと感じられました。少なくともReactのようにHTMLタグ風の不思議な命令を記述し、あまり読みやすいとは言えないアロー関数や状態保持用の変数を定義する『呪文』、TypeScriptによって記述する場合にあちこちに型定義を置く必要があるというとっつきにくさを回避できる場面が生まれるのは魅力的です。
+</p>
+<p>
+もちろん、既存システムの改修を受託開発で行う案件では、よほどのことがない限りシステムの構成要素を大幅に取り替えることはしない（できない）のですが、大幅に取り替えるべき時が来た時に選択肢として検討できるよう「遊んで」おきたいです。
+</p>
+                </div>
+                <footer class="post-footer">
+                <nav class="post-link"><span class="before-post-link">&lt;&lt; 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                </footer>
+            </div>
+        </div>
+        <div class="page-bottom">
+            <div class="bottom-container">
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-container">
+                <p class="copyright">Copyright(c) 青竹 All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="https://blog.aotake91.net/js/article-func-button.js"></script>
+    </body>
+</html>
