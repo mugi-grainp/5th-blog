@@ -66,6 +66,7 @@ a:link {
     .header-container {
         padding: 0;
     }
+
     .header-logo img {
         width: 400px;
         margin-left: auto;
@@ -81,13 +82,6 @@ a:link {
     display: block;
 }
 
-@media (min-width: 768px) {
-    .bc-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
-
 .metadata {
     text-align: right;
     margin-bottom: 1rem;
@@ -97,12 +91,16 @@ a:link {
     display: none;
 }
 
+.main-container, .bc-container {
+    margin: auto 0.8em;
+}
+
 .indexpage .main-container {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .indexpage .main-container {
+@media (min-width: 851px) {
+    .main-container, .bc-container {
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -115,6 +113,9 @@ a:link {
 }
 
 @media (max-width: 850px) {
+    .main-container, .bc-container {
+        margin: 0 0.8rem;
+    }
     .indexpage .articles {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -123,6 +124,7 @@ a:link {
 @media (max-width: 500px) {
     .indexpage .articles {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 }
 
@@ -200,7 +202,7 @@ a:link {
     display: inline-block;
     box-sizing: border-box;
     text-align: center;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .nav-link img {
@@ -218,9 +220,7 @@ a:link {
     margin-left: auto;
     margin-right: 0;
 }
-.main-container {
-    margin: auto 0.8em;
-}
+
 /* 記事ページメイン */
 .post .main-container {
     padding: 80px 4% 0 4%;
