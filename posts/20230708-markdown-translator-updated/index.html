@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Markdownファイルを処理できるAWKのスクリプトを改良しました | 青竹雑記帖（5代目）</title>
-        <base href="https://blog.aotake91.net/">
-        <link rel="icon" href="favicon.ico">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="../../favicon.ico">
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese">
+        <script src="../../js/article-func-button.js" defer></script>
     </head>
     <body class="post">
         <header class="page-header">
             <div class="header-container">
                 <h1 class="header-logo">
-                    <a href="index.html"><img src="img/blog-newlogo.svg" alt="青竹雑記帖"></a>
+                    <a href="index.html"><img src="../../img/blog-newlogo.svg" alt="青竹雑記帖"></a>
                 </h1>
                 <p class="blog-description">デザイン洗練継続中</p>
             </div>
@@ -22,7 +22,7 @@
         <div class="breadcrumb">
             <div class="bc-container">
                 <ul class="nav-link">
-                    <li><a href="archives/">記事一覧</a></li>
+                    <li><a href="../../archives/">記事一覧</a></li>
                     <li><a href="https://aotake91.net/">『青竹荘』トップページ</a></li>
                 </ul>
             </div>
@@ -30,7 +30,7 @@
         <div class="page-main">
             <div class="main-container">
                 <header class="post-header">
-                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <nav class="post-link"><span class="before-post-link">&lt;&lt; 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
                 <h1 id="article-title">Markdownファイルを処理できるAWKのスクリプトを改良しました</h1>
                 <div class="func-buttons">
                     <button id="copy-article-title-and-link-button" type="button">記事タイトルとURLをコピー</button>
@@ -80,8 +80,10 @@ HTMLのレンダリング規則上、ウェブブラウザは&lt;p&gt;タグ中�
 </ul>
 </li>
 <li>箇条書きの階層を変化させるには、タブ1文字か、半角スペース4個のインデントを利用してください。
-</li>
+<ul>
 <li>半角スペース2個など、他の設定にしたい場合はプログラム中の値を書き換える必要があります。将来的に設定変数として切り出す予定です。</li>
+</ul>
+</li>
 </ul>
 <h3>変換可能な記法</h3>
 <p>
@@ -93,32 +95,31 @@ HTMLのレンダリング規則上、ウェブブラウザは&lt;p&gt;タグ中�
 <li>現在、Atx-styleの一部 ( # : NUMBER SIGN U+0023 を行頭にだけ置く形のもの) に対応</li>
 </ul>
 </li>
-<li>段落
-</li>
+<li>段落</li>
 <li>箇条書き
 <ul>
 <li>複数階層にも対応</li>
 </ul>
 </li>
 <li>順序付きリスト
-</li>
+<ul>
 <li>複数階層にも対応</li>
+</ul>
+</li>
 <li>単一のコード</li>
 <li>コードブロック
 <ul>
 <li>空白4つ or タブ文字によるインデントによるブロック表現に対応</li>
 </ul>
 </li>
-<li>区切り線
-</li>
+<li>区切り線</li>
 <li>リンク (title属性付与にも対応)
 <ul>
 <li>通常のリンク</li>
 <li>定義参照リンク</li>
 </ul>
 </li>
-<li>引用
-</li>
+<li>引用</li>
 <li>文章強調・意味付け
 <ul>
 <li>強調 (&lt;em&gt;)</li>
@@ -135,8 +136,7 @@ HTMLのレンダリング規則上、ウェブブラウザは&lt;p&gt;タグ中�
 <li>Underlined-styleのH1、H2見出し</li>
 </ul>
 </li>
-<li>画像挿入 (&lt;img&gt;タグに変換)
-</li>
+<li>画像挿入 (&lt;img&gt;タグに変換)</li>
 <li>Automatic Link</li>
 <li>テーブル</li>
 <li>バッククォート3つの行によって囲むコードブロック</li>
@@ -149,10 +149,11 @@ HTMLのレンダリング規則上、ウェブブラウザは&lt;p&gt;タグ中�
 世の中にはMarkdownをプレビュー、変換できるソフトウェアが数多くあります。他形式の文書ファイルに変換したい場合はpandocを用いると大変便利ですし、単に編集・プレビューするなら、Visual Studio Codeなど多数の優れた無料ソフトがあります。
 </p>
 <p>
-ソフトの中にはWYSIWYG対応のものもあり、こちらはMarkdownエディタというより、文章に見出しや強調をつけたり、箇条書きをしたものをMarkdown形式で保存できる文書作成ソフトといった感じになります。Markdown対応のオンラインの文書作成管理サービスも多数あります。</p>
+ソフトの中にはWYSIWYG対応のものもあり、こちらはMarkdownエディタというより、文章に見出しや強調をつけたり、箇条書きをしたものをMarkdown形式で保存できる文書作成ソフトといった感じになります。Markdown対応のオンラインの文書作成管理サービスも多数あります。
+</p>
                 </div>
                 <footer class="post-footer">
-                <nav class="post-link"><span class="before-post-link">&lt;&lt 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
+                <nav class="post-link"><span class="before-post-link">&lt;&lt; 前記事</span> <span class="after-post-link">次記事 &gt;&gt;</span></nav>
                 </footer>
             </div>
         </div>
@@ -165,6 +166,5 @@ HTMLのレンダリング規則上、ウェブブラウザは&lt;p&gt;タグ中�
                 <p class="copyright">Copyright(c) 2020-2023 麦（青竹） All rights reserved.</p>
             </div>
         </footer>
-        <script src="js/article-func-button.js"></script>
     </body>
 </html>
