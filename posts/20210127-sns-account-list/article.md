@@ -1,5 +1,5 @@
 ---
-postdate:  2021.01.27
+postdate: 2021.01.27
 keywords: SNS
 copyright: Copyright(c) 2020-2021 麦（青竹） All rights reserved.
 summary: もしTwitterが使えなくなったとしたら、そんなときはこの記事を見て私に連絡をつけてください。
